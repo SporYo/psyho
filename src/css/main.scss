@@ -596,6 +596,33 @@ footer {
 
         p {
             color: #fff;
+            a {
+                color: $mainOrange;
+            }
+            a:hover {
+                color: #fff;
+            }
+        }
+        .social {
+            img {
+                width: 30px;
+                margin: 5px;
+            }
+            a:nth-child(1) {
+                img:hover {
+                    content: url(../img/social/fb-1.png)
+                }
+            }
+            a:nth-child(2) {
+                img:hover {
+                    content: url(../img/social/in-1.png)
+                }
+            }
+            a:nth-child(3) {
+                img:hover {
+                    content: url(../img/social/vk-1.png)
+                }
+            }
         }
     }
 }
