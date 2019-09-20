@@ -326,6 +326,18 @@ main {
 
     .about-me {
         background: $bgLightBlue;
+        h4 {
+            font-size: 24px;
+            color: $mainOrange;
+            text-transform: uppercase;
+        }
+
+        ul {
+            li {
+                font-size: 18px;
+                color: $mainBlue;
+            }
+        }
 
         .about-me__container {
             width: 1280px;
@@ -373,35 +385,6 @@ main {
                     span {
                         color: $mainOrange;
                         font-size: 28px;
-                    }
-                }
-            }
-        }
-    }
-
-    .skills {
-        background: $bgLightBlue;
-
-        .skills__container {
-            width: 1280px;
-            margin: 0 auto;
-
-            .skills-items {
-                display: flex;
-                flex-direction: row;
-
-                .item {
-                    h4 {
-                        font-size: 24px;
-                        color: $mainOrange;
-                        text-transform: uppercase;
-                    }
-
-                    ul {
-                        li {
-                            font-size: 18px;
-                            color: $mainBlue;
-                        }
                     }
                 }
             }
@@ -473,30 +456,58 @@ main {
                     left: -20px;
                 }
 
+                p {
+                    color: rgb(60,60,60);
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                h5 {
+                    font-size: 18px;
+                    margin: 0;
+                    color: $mainBlue;
+                    margin-left: 30px;
+                }
                 .contacts__items {
-                    position: relative;
-                    .item {
+                    .call {
                         position: relative;
-                        h5:nth-child(1)::after {
+                        h5::after {
                             content: url(../img/header/tel.png);
                             display: block;
                             position: absolute;
                             top: 1px;
-                            left: -5px;
+                            left: 0px;
                         }
-                        h5:nth-child(2)::after {
-                            content: url(../img/header/tel.png);
+                    }
+                    .email {
+                        position: relative;
+                        h5::after {
+                            content: url(../img/header/mail.png);
                             display: block;
                             position: absolute;
                             top: 1px;
                             left: -5px;
                         }
                     }
-                    h5 {
-                        font-size: 18px;
-                        margin: 0;
-                        color: $mainBlue;
-                        margin-left: 20px;
+                    .address {
+                        position: relative;
+                        h5::after {
+                            content: url(../img/contact/dot.png);
+                            display: block;
+                            position: absolute;
+                            top: 1px;
+                            left: 0px;
+                        }
+                    }
+                    .time {
+                        position: relative;
+                        h5::after {
+                            content: url(../img/contact/time.png);
+                            display: block;
+                            position: absolute;
+                            top: 1px;
+                            left: -5px;
+                        }
                     }
                 }
             }
