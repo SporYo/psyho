@@ -29,6 +29,7 @@ header {
                 position: relative;
                 margin-left: 15px;
             }
+
             p::after {
                 content: url(../img/header/mail.png);
                 display: block;
@@ -43,6 +44,7 @@ header {
                     font-size: 20px;
                     position: relative;
                 }
+
                 a::after {
                     content: url(../img/header/tel.png);
                     display: block;
@@ -65,6 +67,7 @@ header {
                     border-radius: 5px;
                     padding: 15px 20px 15px 20px;
                 }
+
                 a:hover {
                     background: $mainOrange;
                     border: 3px solid $mainOrange;
@@ -264,6 +267,7 @@ main {
                 .call {
                     margin-top: 40px;
                     text-align: center;
+
                     a {
                         font-size: 18px;
                         text-transform: uppercase;
@@ -272,7 +276,7 @@ main {
                         border-radius: 5px;
                         padding: 10px 10px 10px 10px;
                     }
-    
+
                     a:hover {
                         color: #fff;
                         background: $mainOrange;
@@ -281,6 +285,7 @@ main {
                         padding: 10px 10px 10px 10px;
                     }
                 }
+
                 p {
                     color: $mainBlue;
                     font-size: 18px;
@@ -326,6 +331,7 @@ main {
 
     .about-me {
         background: $bgLightBlue;
+
         h4 {
             font-size: 24px;
             color: $mainOrange;
@@ -416,14 +422,39 @@ main {
                 left: -20px;
             }
 
-            .thanks__items {
+            .thanks__items__container {
                 display: flex;
-                justify-content: space-between;
-                margin-top: 50px;
-                padding-bottom: 50px;
-                img {
-                    width: 200px;
+                justify-content: center;
+
+                .thanks__items {
+                    display: flex;
+                    justify-content: center;
+                    width: 90%;
+                    margin-top: 50px;
+                    padding-bottom: 50px;
+
+                    img {
+                        width: 200px;
+                    }
+
+                    .slick-prev,
+                    .slick-next {
+                        height: 50px;
+                        width: 30px;
+                        background: $mainOrange;
+                        opacity: .7;
+                    }
+                    .slick-next {
+                        right: -50px;
+                    }
+                    .slick-prev {
+                        left: -50px;
+                    }
+                    prev:before, .slick-next:before {
+                        font-size: 25px;
+                    }
                 }
+
             }
         }
     }
@@ -460,7 +491,7 @@ main {
                 }
 
                 p {
-                    color: rgb(60,60,60);
+                    color: rgb(60, 60, 60);
                     font-size: 16px;
                     font-weight: 700;
                 }
@@ -471,9 +502,12 @@ main {
                     color: $mainBlue;
                     margin-left: 30px;
                 }
+
                 .contacts__items {
                     .call {
+                        margin-top: 50px;
                         position: relative;
+
                         h5::after {
                             content: url(../img/header/tel.png);
                             display: block;
@@ -482,8 +516,10 @@ main {
                             left: 0px;
                         }
                     }
+
                     .email {
                         position: relative;
+
                         h5::after {
                             content: url(../img/header/mail.png);
                             display: block;
@@ -492,8 +528,10 @@ main {
                             left: -5px;
                         }
                     }
+
                     .address {
                         position: relative;
+
                         h5::after {
                             content: url(../img/contact/dot.png);
                             display: block;
@@ -502,8 +540,10 @@ main {
                             left: 0px;
                         }
                     }
+
                     .time {
                         position: relative;
+
                         h5::after {
                             content: url(../img/contact/time.png);
                             display: block;
@@ -599,28 +639,34 @@ footer {
 
         p {
             color: #fff;
+
             a {
                 color: $mainOrange;
             }
+
             a:hover {
                 color: #fff;
             }
         }
+
         .social {
             img {
                 width: 30px;
                 margin: 5px;
             }
+
             a:nth-child(1) {
                 img:hover {
                     content: url(../img/social/fb-1.png)
                 }
             }
+
             a:nth-child(2) {
                 img:hover {
                     content: url(../img/social/in-1.png)
                 }
             }
+
             a:nth-child(3) {
                 img:hover {
                     content: url(../img/social/vk-1.png)
@@ -629,3 +675,104 @@ footer {
         }
     }
 }
+
+/* PoPup */
+
+.popap-call {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 1111;
+  }
+  
+  .popap-call__content {
+    width: 500px;
+    height: 600px;
+    margin: 0px auto;
+    position: relative;
+  }
+  
+  .popap-call .popap-call__content {
+    margin: 100px auto 0px auto;
+    width: 350px;
+    height: 470px;
+    padding: 10px 50px 0px 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #000;
+  }
+  
+  .popap-question {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 1111;
+  }
+  
+  
+  .popap__close:hover {
+    opacity: 1;
+  }
+  
+  .popap__close:before,
+  .popap__close:after {
+    position: absolute;
+    left: 469px;
+    top: 0px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #fff;
+  }
+  
+  .popap__close:before {
+    transform: rotate(45deg);
+  }
+  
+  .popap__close:after {
+    transform: rotate(-45deg);
+  }
+  .send_mail input::placeholder {
+    font-size: 16px;
+    color: #252525;
+    margin: 10px;
+  }
+  .back-call__btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #d6d6d6;
+  }
+  
+  .back-call__btn:first-child {
+    margin-top: 20px;
+  }
+  
+  .back-call__btn:focus {
+    border-bottom: 1px solid #fd6500;
+  }
+  .back-call__btn_a {
+    margin-top: 24px;
+    text-align: left;
+    vertical-align: middle;
+    padding-bottom: 30px;
+  }
+  
+  .back-call__btn_a a {
+    border-radius: 24.5px;
+    background-color: #fd6500;
+    padding: 14px 98px;
+    position: relative;
+    top: 15px;
+    color: white;
+    font-size: 18px;
+  }

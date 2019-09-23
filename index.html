@@ -21,23 +21,23 @@
          <div class="header-top">
             <div class="header-top__container">
                <a href="#">
-                  <div class="logo"><img src="./src/img/header/Logo.png" alt="Логотип"></div>
+                  <div class="logo"><img src="./src/img/header/logo.png" alt="Логотип" width="250" height="50"></div>
                </a>
                <p>mailtest@gmail.com</p>
                <div class="contacts">
                   <a href="tel:+79998988998">+7(999)898-89-98</a>
                </div>
                <div class="call">
-                  <a href="#">Заказать звонок</a>
+                  <a href="javascript:PopUpShow()">Заказать звонок</a>
                </div>
             </div>
          </div>
          <div class="header-bottom">
-            <nav>
+            <nav id="nav">
                <a href="#">Главная</a>
-               <a href="#">Услуги</a>
-               <a href="#">Обо мне</a>
-               <a href="#">Контакты</a>
+               <a href="#online">Услуги</a>
+               <a href="#about-me">Обо мне</a>
+               <a href="#contacts">Контакты</a>
             </nav>
          </div>
 
@@ -52,8 +52,8 @@
                   <h1>Есть проблемы?</h1>
                   <p>Вам всегда помогут</p>
                   <div class="left__btn">
-                     <a href="">Помощь</a>
-                     <a href="">Контакты</a>
+                     <!-- <a href="">Помощь</a> -->
+                     <a href="#contacts">Контакты</a>
                   </div>
                </div>
                <div class="right">
@@ -113,7 +113,7 @@
             </div>
          </section>
 
-         <section class="online">
+         <section class="online" id="online">
             <div class="online__container">
                <div class="left">
                   <img src="./src/img/online/img-online.svg" alt="">
@@ -127,7 +127,7 @@
                      услугой напишите мне, и оставьте свои контакты.
                   </p>
                   <div class="call">
-                     <a href="#">Заказать звонок</a>
+                     <a href="javascript:PopUpShow()">Заказать звонок</a>
                   </div>
                </div>
             </div>
@@ -147,7 +147,7 @@
             </div>
          </section>
 
-         <section class="about-me">
+         <section class="about-me" id="about-me">
             <div class="about-me__container">
                <div class="left">
                   <div class="about-me__info">
@@ -205,18 +205,21 @@
          <section class="gallery">
             <div class="gallery__container">
                <h2>Сертификаты</h2>
-               <div class="thanks__items">
-                  <a data-fancybox="gallery" href="./src/img/tnx/1.jpg"><img src="./src/img/tnx/1.jpg"></a>
-                  <a data-fancybox="gallery" href="./src/img/tnx/2.jpg"><img src="./src/img/tnx/2.jpg"></a>
-                  <a data-fancybox="gallery" href="./src/img/tnx/3.jpg"><img src="./src/img/tnx/3.jpg"></a>
-                  <a data-fancybox="gallery" href="./src/img/tnx/4.jpg"><img src="./src/img/tnx/4.jpg"></a>
-                  <a data-fancybox="gallery" href="./src/img/tnx/5.jpg"><img src="./src/img/tnx/5.jpg"></a>
-                  <a data-fancybox="gallery" href="./src/img/tnx/6.jpg"><img src="./src/img/tnx/6.jpg"></a>
+               <div class="thanks__items__container">
+                  <div class="thanks__items">
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/1.jpg"><img src="./src/img/tnx/1.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/2.jpg"><img src="./src/img/tnx/2.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/3.jpg"><img src="./src/img/tnx/3.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/4.jpg"><img src="./src/img/tnx/4.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/5.jpg"><img src="./src/img/tnx/5.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/6.jpg"><img src="./src/img/tnx/6.jpg"></a></div>
+                        <div><a data-fancybox="gallery" href="./src/img/tnx/7.jpg"><img src="./src/img/tnx/7.jpg"></a></div>
+                  </div>
                </div>
             </div>
          </section>
 
-         <section class="contacts">
+         <section class="contacts" id="contacts">
             <div class="contacts__container">
                <div class="contact">
                   <h2>Контакты</h2>
@@ -240,16 +243,11 @@
                         <p>Круглосуточно, без выходных</p>
                      </div>
                   </div>
-                  <div class="contacts__info">
-                     <p>До нас очень легко добраться на общественном транспорте:</p>
-                     <p>От станции метро «Василеостровская» не более 10 минут на автобусах №1, 41 или 128,152. Выходите
-                        у 17-й линии и пройдите 200 метров.</p>
-                  </div>
                </div>
                <div class="map">
                   <iframe
                      src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab87f4a08340210a5d617238cf163f9cdd2959a59a4806593e400a64edbb25c21&amp;source=constructor"
-                     width="700" height="500" frameborder="0"></iframe>
+                     width="700" height="400" frameborder="0"></iframe>
                </div>
             </div>
          </section>
@@ -275,7 +273,7 @@
       <footer>
          <div class="footer__container">
             <a href="#">
-               <div class="logo"><img src="./src/img/header/Logo.png" alt="Логотип"></div>
+               <div class="logo"><img src="./src/img/header/logo.png" alt="Логотип" width="250" height="50"></div>
             </a>
             <p>2019 © <a href="#">ProTest</a>. Все права защищены</p>
             <div class="social">
@@ -286,11 +284,31 @@
          </div>
       </footer>
 
+      <!-- Popaps -->
+      <div class="popap-call" id="popap-question">
+            <div class="popap-call__content">
+              <!-- <a href="javascript:PopUpHide()" class="popap__close_a"><span class="popap__close"></span></a> -->
+              <p class="back-call__title">
+                Заказать звонок
+              </p>
+              <img src="./img/back-call/line.png" alt="">
+              <form action="" class="send_mail">
+                <input class="back-call__btn" type="text" placeholder="Ваше имя">
+                <input class="back-call__btn phone_mask" type="text" placeholder="Ваш телефон">
+                <input class="back-call__btn email_mask" type="text" placeholder="E-mail" type="email" id="#email">
+                <input class="back-call__btn" type="text" placeholder="Сообщение" >
+                <div class="back-call__btn_a">
+                  <a href="#">Заказать звонок</a>
+                </div>
+              </form>
+            </div>
+          </div>
+
    </div>
    <script src="./src/js/jquery-3.4.1.min.js"></script>
-   <script type="text/javascript" src="./src/dist/slick/slick.min.js"></script>
+   <script type="text/javascript" src="/src/dist/slick/slick.min.js"></script>
    <script src="./src/dist/fancybox/jquery.fancybox.min.js"></script>
-   <script src="build/js/script.js"></script>
+   <script src="/src/js/main.js"></script>
 </body>
 
 </html>
