@@ -450,7 +450,7 @@ main {
                     .slick-prev {
                         left: -50px;
                     }
-                    prev:before, .slick-next:before {
+                    .slick-prev:before, .slick-next:before {
                         font-size: 25px;
                     }
                 }

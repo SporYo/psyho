@@ -73,3 +73,9 @@ $(document).ready(function(){
         });
     });
     
+
+// maskinput
+
+$(function(){
+	$(".phone_mask").mask("8(999) 999-9999");
+});
