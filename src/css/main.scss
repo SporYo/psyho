@@ -113,9 +113,9 @@ header {
 
 main {
     .first-block {
-        padding-top: 100px;
+        
         margin-bottom: -100px;
-        height: 80vh;
+        height: 100vh;
         z-index: 997;
         .first-block__container {
             width: 1180px;
@@ -129,6 +129,7 @@ main {
                 text-align: center;
 
                 h1 {
+                    padding-top: 100px;
                     font-size: 56px;
                     text-transform: uppercase;
                     color: $mainOrange;
