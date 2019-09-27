@@ -16,7 +16,7 @@ header {
         border-bottom: 8px solid $mainOrange;
 
         .header-top__container {
-            width: 1280px;
+            width: 1180px;
             height: 90px;
             margin: 0 auto;
             display: flex;
@@ -79,10 +79,9 @@ header {
     }
 
     .header-bottom {
-        background: $bgLightBlue;
 
         nav {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
             height: 60px;
             display: flex;
@@ -107,23 +106,17 @@ header {
 
 main {
     .first-block {
-        margin-top: 50px;
-
+        padding-top: 100px;
+        margin-bottom: -100px;
+        height: 80vh;
         .first-block__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
-            .right {
-                width: 60%;
-
-                img {
-                    width: 100%;
-                }
-            }
-
+            background: url(/build/img/first-block/bg.png) no-repeat;
+            height: 100%;
             .left {
                 text-align: center;
 
@@ -131,9 +124,9 @@ main {
                     font-size: 56px;
                     text-transform: uppercase;
                     color: $mainOrange;
-                    margin-top: 100px;
+                    margin-top: 50px;
                     margin-bottom: 20px;
-                    letter-spacing: 5px;
+                    // letter-spacing: 5px;
                 }
 
                 p {
@@ -169,7 +162,7 @@ main {
         background: $bgLightBlue;
 
         .causes__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
 
             h2 {
@@ -214,7 +207,7 @@ main {
                 .item {
                     display: flex;
                     flex-direction: row;
-                    width: 600px;
+                    width: 550px;
 
                     img {
                         margin-right: 30px;
@@ -227,7 +220,7 @@ main {
 
     .online {
         .online__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
             margin-top: 50px;
             display: flex;
@@ -346,7 +339,7 @@ main {
         }
 
         .about-me__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
             display: flex;
             flex-direction: row;
@@ -399,7 +392,7 @@ main {
 
     .gallery {
         .gallery__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
 
             h2 {
@@ -435,6 +428,7 @@ main {
 
                     img {
                         width: 200px;
+                        margin: 30px;
                     }
 
                     .slick-prev,
@@ -463,7 +457,7 @@ main {
         background: $bgLightBlue;
 
         .contacts__container {
-            width: 1280px;
+            width: 1180px;
             margin: 0 auto;
             display: flex;
             flex-direction: row;
@@ -504,10 +498,10 @@ main {
                 }
 
                 .contacts__items {
+                    margin-bottom: 30px;
                     .call {
                         margin-top: 50px;
                         position: relative;
-
                         h5::after {
                             content: url(../img/header/tel.png);
                             display: block;
@@ -629,7 +623,7 @@ footer {
     height: 100px;
 
     .footer__container {
-        width: 1280px;
+        width: 1180px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -776,3 +770,116 @@ footer {
     color: white;
     font-size: 18px;
   }
+
+/* Меню бургер */
+
+.menu {
+    display: none;
+}
+
+.menu__icon {
+    display: none;
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: $mainOrange;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .15s ease-in-out;
+}
+
+.menu__icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu__icon span:nth-child(2),
+.menu__icon span:nth-child(3) {
+    top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+    top: 26px;
+}
+
+.menu__links .nav__link {
+    font-size: 25px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.menu__links .nav__link:nth-child(1) {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.33;
+    color: #333333;
+    position: relative;
+}
+
+.menu__links .nav__link:nth-child(2) {
+    background-color: #fbb306;
+    color: #fff;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.menu__links .nav__link:first-child {
+    margin-top: 30px;
+}
+
+.menu__links-item {
+    display: inline-block;
+    color: #333333;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu__links-item:hover {
+    text-decoration: underline;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu.menu_state_open .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+header .header-top .menu.menu_state_open .menu__links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@import './media.scss';
