@@ -3,7 +3,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -71,14 +71,14 @@ header {
                     text-transform: uppercase;
                     color: #fff;
                     border: 3px solid $mainOrange;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     padding: 10px 30px;
                 }
 
                 a:hover {
                     background: $mainOrange;
                     border: 3px solid $mainOrange;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     padding: 10px 30px;
                 }
             }
@@ -94,18 +94,19 @@ header {
             display: flex;
             align-items: center;
             justify-content: space-around;
-
+            
             a {
                 color: $mainBlue;
                 font-size: 18px;
-                text-transform: uppercase;
-                font-weight: bold;
+                position: relative;
+                // height: 10%;
             }
 
-            a:hover {
-                color: $mainOrange;
+            a:hover::before {
+                content: '';
+                position: absolute;
+                top: 40px; left: 0; bottom: 0; right: 0;
                 border-bottom: 5px solid $mainOrange;
-                margin-bottom: -5px;
             }
         }
     }
@@ -116,7 +117,7 @@ main {
         
         margin-bottom: -100px;
         height: 100vh;
-        z-index: 997;
+        // z-index: 997;
         .first-block__container {
             width: 1180px;
             margin: 0 auto;
@@ -124,8 +125,8 @@ main {
             flex-direction: row;
             justify-content: space-between;
             background: url(../img/first-block/bg.png) no-repeat 100%;
+            background-position-y: 90px;
             height: 100%;
-            margin-top: -80px;
             .left {
                 text-align: left;
 
@@ -134,7 +135,7 @@ main {
                     font-size: 67px;
                     text-transform: uppercase;
                     color: $mainOrange;
-                    margin-top: 50px;
+                    // margin-top: 50px;
                     margin-bottom: 20px;
                     // letter-spacing: 5px;
                 }
@@ -155,6 +156,7 @@ main {
                         padding: 13px 25px;
                         border: 1px solid #fff;
                         border-radius: 10px;
+                        text-transform: uppercase;
                     }
 
                     a:hover {
@@ -178,7 +180,7 @@ main {
                 color: $mainBlue;
                 position: relative;
                 margin-left: 20px;
-                padding-top: 30px;
+                padding-top: 25px;
             }
 
             h2:after {
@@ -192,8 +194,10 @@ main {
                 left: -20px;
             }
             h4 {
-                color: $mainOrange;
+                color: $mainBlue;
                 font-size: 28px;
+                text-transform: uppercase;
+                font-weight: bold;
                 margin: 0;
             }
 
@@ -209,7 +213,7 @@ main {
                 flex-direction: row;
                 justify-content: space-around;
                 flex-wrap: wrap;
-                margin-top: 50px;
+                // margin-top: 50px;
 
                 .item {
                     display: flex;
@@ -306,7 +310,7 @@ main {
 
             .right2 {
                 width: 50%;
-
+                margin-top: -50px;
                 h2 {
                     font-size: 30px;
                     text-transform: uppercase;
@@ -342,15 +346,19 @@ main {
         background: $bgLightBlue;
         padding-bottom: 30px;
         h4 {
-            font-size: 24px;
-            color: $mainOrange;
+            font-size: 20px;
+            color: $mainBlue;
             text-transform: uppercase;
         }
 
         ul {
+            margin-left: -20px;
             li {
                 font-size: 18px;
-                color: $mainBlue;
+                color: $mainOrange;
+                span {
+                    color: $mainBlue;
+                }
             }
         }
 
@@ -363,8 +371,7 @@ main {
 
             .about-me__foto {
                 img {
-                    width: 400px;
-                    margin-right: 50px;
+                    width: 385px;
                     margin-top: 30px;
                 }
             }
@@ -417,7 +424,7 @@ main {
                 color: $mainBlue;
                 position: relative;
                 margin-left: 20px;
-                padding-top: 35px;
+                // padding-top: 35px;
             }
 
             h2:after {
@@ -427,7 +434,7 @@ main {
                 height: 50px;
                 background: $mainOrange;
                 position: absolute;
-                top: 30px;
+                top: -2px;
                 left: -20px;
             }
 
@@ -451,19 +458,20 @@ main {
                     .slick-next {
                         height: 60px;
                         width: 30px;
-                        background: $mainOrange;
+                        // background: $mainOrange;
                         opacity: .7;
                     }
                     .slick-next {
                         right: -50px;
-                        padding-top: 5px;
+                        top: 170px;
                     }
                     .slick-prev {
                         left: -50px;
-                        padding-top: 5px;
+                        top: 170px;
                     }
                     .slick-prev:before, .slick-next:before {
-                        font-size: 25px;
+                        font-size: 40px;
+                        color: $mainOrange;
                     }
                 }
 
@@ -503,9 +511,9 @@ main {
                 }
 
                 p {
-                    color: rgb(60, 60, 60);
+                    color: $mainBlue;
                     font-size: 16px;
-                    font-weight: 700;
+                    margin-left: 30px;
                 }
 
                 h5 {
@@ -598,16 +606,13 @@ main {
                     line-height: 1.71;
                     color: #999999;
                     background: $bgLightBlue;
-                    font-weight: bold;
                 }
 
                 input[type="text"]::-webkit-input-placeholder {
                      color: $mainBlue; 
-                     font-weight: bold;
                 }
                 textarea[type="text"]::-webkit-input-placeholder {
                      color: $mainBlue; 
-                     font-weight: bold;
                 }
 
                 input:focus::-webkit-input-placeholder {
@@ -630,11 +635,10 @@ main {
                     border: none;
                     text-align: center;
                     font-size: 14px;
-                    line-height: 3;
+                    line-height: 3.4;
                     color: #999999;
-                    font-family: 'Roboto', sans-serif;
+                    font-family: 'Open Sans', sans-serif;
                     background: $bgLightBlue;
-                    font-weight: bold;
                 }
 
                 textarea:focus::-webkit-input-placeholder {
@@ -780,7 +784,7 @@ footer {
                 font-size: 14px;
                 line-height: 3;
                 color: #999999;
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Open Sans', sans-serif;
                 background: $bgLightBlue;
                 font-weight: bold;
             }
