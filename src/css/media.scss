@@ -20,6 +20,7 @@
         .menu {
             display: block;
             text-align: right;
+            z-index: 9;
 
             .menu__icon {
                 display: inline-block;
@@ -386,6 +387,20 @@
         }
     }
 
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    header{
+        .header-top {
+            .menu.menu_state_open {
+                .menu__links {
+                    position: relative;
+                    left: 0px;
+                    top: 23px;
+                }
+            }
+        }
+    } 
 }
 
 @media (max-width: 767px) {

@@ -726,7 +726,7 @@ footer {
     top: 0px;
     z-index: 1111;
     .popap-call__content {
-        width: 350px;
+        width: 300px;
         height: 470px;
         margin: 100px auto 0px auto;
         padding: 10px 50px 0px 50px;
@@ -740,11 +740,10 @@ footer {
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 35px;
             input {
                 width: 300px;
                 height: 45px;
-                margin-right: 20px;
                 margin-bottom: 20px;
                 border: none;
                 text-align: center;
@@ -778,7 +777,7 @@ footer {
             }
 
             textarea {
-                width: 300px;
+                width: 280px;
                 height: 47px;
                 margin-top: 20px;
                 border: none;
@@ -796,7 +795,7 @@ footer {
            }
 
             button {
-                width: 220px;
+                width: 280px;
                 height: 50px;
                 background-color: $mainOrange;
                 color: #fff;
@@ -893,7 +892,7 @@ footer {
     width: 45px;
     height: 35px;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 40px;
     cursor: pointer;
 }
