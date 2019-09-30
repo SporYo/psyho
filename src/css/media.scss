@@ -203,12 +203,19 @@
 
                 .right {
                     width: 90%;
+                    margin: 0;
                 }
 
                 .right2 {
                     width: 90%;
-                    // margin-left: 50px;
+                    
                     order: 2;
+                    h2 {
+                        margin-top: 70px;
+                    }
+                    h2:after {
+                        top: 14px;
+                    }
                 }
             }
         }
@@ -244,6 +251,22 @@
                     text-align: center;
                     h1 {
                         font-size: 50px;
+                    }
+                }
+            }
+        }
+        .online {
+            .online__container {
+                .right {
+                    margin-left: 0;
+                    
+                }
+                .right2 {
+                    h2 {
+                        margin-top: 70px;
+                    }
+                    h2:after {
+                        top: 14px;
                     }
                 }
             }
@@ -308,10 +331,10 @@
                 }
                 .right2 {
                     h2 {
-                        padding-top: 30px;
+                        margin-top: 70px;
                     }
                     h2:after {
-                        top: 39px;
+                        top: 14px;
                     }
                 }
             }
