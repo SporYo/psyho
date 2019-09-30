@@ -127,11 +127,11 @@ main {
             height: 100%;
             margin-top: -80px;
             .left {
-                text-align: center;
+                text-align: left;
 
                 h1 {
-                    padding-top: 150px;
-                    font-size: 56px;
+                    padding-top: 100px;
+                    font-size: 67px;
                     text-transform: uppercase;
                     color: $mainOrange;
                     margin-top: 50px;
@@ -144,6 +144,7 @@ main {
                     text-transform: uppercase;
                     color: $mainBlue;
                     font-weight: bold;
+                    padding-bottom: 30px;
                 }
 
                 .left__btn {
@@ -170,7 +171,7 @@ main {
         .causes__container {
             width: 1180px;
             margin: 0 auto;
-
+            padding-bottom: 30px;
             h2 {
                 font-size: 30px;
                 text-transform: uppercase;
@@ -339,7 +340,7 @@ main {
 
     .about-me {
         background: $bgLightBlue;
-
+        padding-bottom: 30px;
         h4 {
             font-size: 24px;
             color: $mainOrange;

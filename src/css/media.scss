@@ -32,7 +32,7 @@
                 left: 0;
                 margin-top: 144px;
                 background-color: $mainOrange;
-                z-index: 1000;
+                z-index: 9999;
                 overflow: auto;
             }
 
@@ -240,6 +240,12 @@
             height: 500px;
             .first-block__container {
                 background: none;
+                .left {
+                    text-align: center;
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
             }
         }
         .call-back {
@@ -284,6 +290,7 @@
                 background: none;
                 .left {
                     margin: 0 auto;
+                    text-align: center;
                     h1 {
                         font-size: 50px;
                         
