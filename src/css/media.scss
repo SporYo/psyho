@@ -298,6 +298,24 @@
                 }
             }
         }
+        .online {
+            .online__container {
+                .right {
+                    margin-left: 0;
+                    h2:after {
+                        top: 13px;
+                    }
+                }
+                .right2 {
+                    h2 {
+                        padding-top: 30px;
+                    }
+                    h2:after {
+                        top: 39px;
+                    }
+                }
+            }
+        }
         .about-me {
             .about-me__container {
                 .about-me__foto {

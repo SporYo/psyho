@@ -19,7 +19,8 @@ $('.thanks__items').slick({
             breakpoint: 600,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 2,
+                arrows: false
             }
         },
         {
